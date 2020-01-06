@@ -1,0 +1,19 @@
+function fiboEvenSum(n) {
+  let num1 = 1;
+  let num2 = 2;
+  let sum = 2;
+  let fibbo;
+  if (n <= 1) return sum;
+  for (let i = 3; i <= n; i++) {
+    fibbo = num1 + num2;
+    num1 = num2;
+    num2 = fibbo;
+    if (fibbo % 2 == 0) sum += fibbo;
+  }
+  return sum;
+}
+
+fiboEvenSum(10);
+fiboEvenSum(18);
+fiboEvenSum(23);
+fiboEvenSum(43);
